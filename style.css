@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    position: sticky;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #815560;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 10px 0 20px;
+}
+h2{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+h2 span{
+    color: orange;
+}
+ul{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap :20px;
+    padding: 0px;
+}
+nav ul li{
+    padding: 1px;
+    height: 80px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+nav ul li:hover{
+    color:rgb(255, 251, 0);
+    border-bottom: 2px solid rgb(255 ,251,0);
+}
+.active{
+    color: rgb(255,208,0);
+    border-bottom:3px solid rgb(255,208,0) ;
+}
+section{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('./image/image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.secDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+button{
+    margin: 20px 20px 0px 20px;
+    padding: 5px 30px 5px 30px;
+    background-color: transparent;
+    border: 3px solid yellow;
+    font-size: 20px;
+    border-radius: 25px;
+    color: white;
+    letter-spacing: 1px;
+}
+.content{
+    width: 80%;
+    height: auto;
+} */
+ .content h1{
+    color: orange;
+    font-size: 50px;
+}
+.content h3{
+    color: white;
+    font-size: 25px;
+}
+.content p{
+    margin: 30px 0 20px 0;
+color: white;
+font-size: 16px;
+}
+.nextButton{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.pagination{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+.pagination li{
+    border:2px solid rgba(250,112,6,0.6);
+    padding: 5px 15px 5px 15px;
+    border-radius: 50%;
+}
+.btnActive{
+    background: orange;
+}
+.liActive{
+    background: green;
+}
+ @media only screen and (max-width:680px){
+    nav {
+        flex-direction: column;
+        width:100%
+    }
+    nav ul{
+        flex-direction: column;
+        padding: 0;
+        margin-bottom:5px ;
+    }
+    nav ul li {
+        height: auto;
+    }
+    .active{
+        border:none
+    }
+    .btnDiv{
+        text-align: center;
+    }
+    .pagination{
+        align-items: center;
+    }
+    section{
+        min-height: 80vh;
+    }
+    button{
+        margin:10px
+    }
+    .pagination{
+        margin-top: 10px;
+    }
+} 
