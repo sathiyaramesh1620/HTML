@@ -1,55 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task in css</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
-<body>
-    
-        <nav>
-            <div class="header_left">
-                <img src="" alt="">
-                <h1>The <span>City</span></h1>
-            </div>
-            <div class="header_right">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Causes</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        
-        </nav>
-        <div class="top_container">
-            <h1>Island</h1>
-            <h3> 4 a better world</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi voluptatum iusto, dignissimos omnis, voluptas fuga sapiente expedita ullam repellendus tempora delectus. Commodi iure libero quos! Quia id quisquam odio?</p>
-            <a class="slider" href=""><i class="fa-solid fa-angle-right"></i></a>
-            <div>
-                <button class="sign_in">Sign In</button>
-                <button class="read_more">Read More</button>
-            </div>
-            <div class="page">
-                <li>01</li>
-                <li>02</li>
-                <li>03</li>
-            </div>
 
+<body>
+
+  <!-- Navbar section -->
+
+  <section id="header" class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#"><h3 style="color: yellow;"><span><i class="fa fa-cutlery" aria-hidden="true"></i>
+        </span>Restoran</h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#carousel" style="color: yellow;">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#card">SERVICE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">MENU</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                PAGES
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#booking">Booking</a></li>
+                <li><a class="dropdown-item" href="#ourteam">Our Team</a></li>
+                <li></li>
+                <li><a class="dropdown-item" href="#">Testmonial</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+
+            <button class="btn btn-success" type="submit">BOOK A TABLE</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-------------------slide button------------------->
+  <section>
+    <!-- Carousel -->
+    <div id="demo" class="carousel carousel-fade slide h-50" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item h-50 active">
+          <img src="./images/img1.jpg" alt="Los Angeles" class="d-block w-100" >
+          <div class="carousel-caption  d-md-block head">
+            <h5 class="display-6 text-center fw-bold">
+             WELCOME TO RESTRON
+            </h5>
+            <p class="display-7 d-flex  text-center  fw-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi dolorum nam voluptatum qui! Harum, ad tempore consectetur magnam beatae consequatur!</p>
+            <button class="btn btn-success">Book Table</button>
+            </div>
+            
 
         </div>
-   
+        <div class="carousel-item h-50">
+          <img src="./images/img2.jpg" alt="Chicago" class="d-block" style="width:100% ;" >
+          <div class="carousel-caption  d-md-block head">
+            <h5 class="display-5 text-center fw-bold">
+              Enjoy Our Delicious Meal
+            </h5>
+            <p class="display-7 text-center fw-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi dolorum nam voluptatum qui! Harum, ad tempore consectetur magnam beatae consequatur!</p>
+            </div>
+        </div>
+        <div class="carousel-item h-50">
+          <img src="./images/img3.jpg" alt="New York" class="d-block" style="width:100%">
+          <div class="carousel-caption  d-md-block head">
+            <h5 class="display-5 text-center fw-bold">
+              The Best Tasting Experiences
+            </h5>
+            <p class="display-7 text-center fw-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi dolorum nam voluptatum qui! Harum, ad tempore consectetur magnam beatae consequatur!</p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev " type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon "></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+
+
+  </section>
+
+  <!-- About Us -->
+  <section id="About" class="mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="./images/sampl1.jpg" height="100px" width="100px" alt="">
+            </div>
+            <div class="col-md-3">
+              <img src="./images/sampl2.jpg" height="100px" width="100px"  alt="">
+            </div>
+
+          </div>
+          <span class="bg-light"></span>
+          <div class="row">
+            <div class="col-md-3">
+              <img src="./images/sampl3.jpg" height="100px" width="100px"  alt="">
+            </div>
+            <div class="col-md-3">
+              <img src="./images/sampl4.jpg" height="100px" width="100px"  alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5>About us--</h5>
+          <h2>Welcome to Restoran</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis excepturi eum perspiciatis! Ullam nesciunt ipsam reiciendis, velit, suscipit illum nihil minus consequuntur explicabo soluta, excepturi consectetur blanditiis cum veritatis.</p>
+          <div>
+            <h2><span>15+ Years experiences</span></h2>
+            <h2><span>50 </span> Master chefs</h2>
+          </div>
+          <button class="btn btn-success"> Read More</button>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Card Section -->
+  <section id="card" class="mt-5">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-md-3">
+
+          <div class="card mb-3 rounded-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent "><i class="fa fa-user-circle" style="color: yellow;"
+                aria-hidden="true"></i>
+            </div>
+            <div class="card-body ">
+              <h5 class="card-title">Master chefs</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="col-md-3">
+          <div class="card mb-3 rounded-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent  "><i class="fa fa-cutlery" aria-hidden="true"
+                style="color: yellow"></i>
+            </div>
+            <div class="card-body text-dark ">
+              <h5 class="card-title">Quality Food</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="col-md-3">
+          <div class="card mb-3 rounded-3 " style="max-width: 18rem;">
+            <div class="card-header bg-transparent "><i class="fa fa-shopping-cart" aria-hidden="true"
+                style="color: yellow;"></i>
+            </div>
+            <div class="card-body text-dark">
+              <h5 class="card-title">Online order</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- card4 -->
+        <div class="col-md-3">
+          <div class="card rounded-3 mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent "><i class="fa fa-headphones  " aria-hidden="true"
+                style="color: yellow;"></i>
+            </div>
+            <div class="card-body text-dark">
+              <h5 class="card-title">24/7 Service</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Menu section -->
+  <section id="menu">
+    <div class="container mt-10">
+      <h6 class="display-4 text center">--Food Menu--</h6>
+      <p>
+      <h3 class="display-4 text center">Most Popular Items
+
+      </h3>
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-3" style="max-width: 540px; border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4 ">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px; border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px; border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px;border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-3" style="max-width: 540px; border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px;border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px;border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px;border: none;">
+            <div class="row g-0">
+              <div class="col-sm-4">
+                <img src="./images/menu1.jpg" class="img-fluid rounded-start cover" alt="...">
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h5 class="card-title">Burger</h5>
+                  <h6>$115</h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quibusdam?</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Booking section -->
+  <section id="booking">
+    <div class="container  mt-5 ">
+      <div class="row ">
+        <div class="col-sm-6 w-100">
+          <img src="./images/bkimg1.jpg" class="w-100 h-100">
+        </div>
+        <div class="col-sm-6 w-100 ">
+          <div class="card bg-info">
+            <div class="card-header ">
+              <h3>Reservation--</h3>
+              <h2>Book A Table Online</h2>
+            </div>
+            <div class="card-body ">
+              <form action="">
+                <div class="form-group">
+                  <input class="form-control" placeholder="Your Name"></input>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Enter Email"></input>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Date And Time"></input>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="1"></input>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Special Request"></input>
+                </div>
+                <button class="btn btn-success w-100" value="book now">Book Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our Team section -->
+  <section id="ourteam" class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="card border-0" style="width: 17rem;">
+
+          <img src="./images/teamimg1.jpg" class="card-img-top rounded-circle" width="50px" height="200px" class="img-fluid  " alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 17rem;">
+         <img src="./images/teamimg2.jpg" class="card-img-top rounded-circle " width="50px" height="200px" alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 17rem;">
+          <img src="./images/teamimg1.jpg" class="card-img-top rounded-circle "   height="200px">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 17rem;">
+          <img src="./images/teamimg2.jpg" class="card-img-top rounded-circle"width="50px" height="200px" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer section -->
+    <footer class="site-footer bg-dark text-white p-5" id="contact" >
+    <div class="footer-widgets">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="foot-about">
+              <h2 style="color: yellow;">Company</h2>
+              <div >
+                <ul class="fs-3 d-flex flex-wrap align-items-center gap-2 list-unstyled">
+                  <li><span style="font-size:xx-small;"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>About Us</li>
+                  <li><span style="font-size:xx-small;" ><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>Contact Us</li>
+                  <li><span style="font-size:xx-small;"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>Reservation</li>
+                  <li><span style="font-size:xx-small;"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>Privacy Policy</li>
+                  <li><span style="font-size:xx-small;"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </span>Terms& Conditions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <h2 style="color: yellow;">Contact</h2>
+            <div>
+              <ul class="fs-3 d-flex flex-wrap align-items-center gap-2 list-unstyled">
+                <li>123 street,New York,USA</li>
+                <li>1234567890</li>
+                <li>Mail@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <h2 style="color: yellow;">Openning</h2>
+            <div>
+              <ul class="fs-3 d-flex flex-wrap align-items-center gap-4 list-unstyled">
+                <li>Monday-Saturday</li>
+                <li>9AM-10PM</li>
+                <li>Sunday</li>
+                <li>10AM-8PM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <h2 style="color: yellow;">Newsletter</h2>
+            <p  class="fs-3 d-flex">Lorem ipsum dolor sit amet.</p>
+            <div class="subscribe-form">
+              <form class="was-validated d-flex align-items-center">
+                  <input class="form-control is-invalid px-3 py-2 rounded-3 border-0" type="email"
+                      placeholder="Your email" required />
+                  <input class="px-3 py-2 rounded-3 border-0 ms-2 text-white btn_L"
+                      data-bs-target="#exampleModalToggle" data-bs-toggle="modal" type="button" 
+                      value="signup" />
+              </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- scroll section -->
+  <div class="scrollTop">
+    <a href=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </a>
+  </div>
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script> -->
 </body>
 
 </html>

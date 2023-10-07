@@ -1,121 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 *{
-    
-    font-family: 'Roboto Slab', serif;;
-    padding: 0;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-
+    scroll-behavior: smooth;
+}
+.carousel {
+    height: 500px;
 }
 
-nav{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-background-color: #fff;
-color: black;
-width: 100%;
-z-index: 1000;
- position: fixed;   
-    
+/* Declare heights because of positioning of img element */
+.carousel .carousel-item {
+    height: 500px;
+    background-color: #777;
+    margin-top: 0px;
+}
 
-
-}
-.header_left>h1>span{
-    flex: 0.4;
-    color: tomato;
-}
-.header_right {
-    
-    text-decoration: none;
-}
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    text-decoration: none;
-    padding:10px 20px ;
-}
-nav ul li a{
-    text-decoration: none;
-}
-nav ul li a:hover{
-    color:blueviolet;
-}
-.top_container{
+.carousel-inner>.carousel-item>img {
+    position: relative;
     top: 0;
-    height: 100vh;
-    width: 100vw;
-    background:url('./image//image.jpg');
-    background-position: center;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.scrollTop{
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+    right: 10px;
+    padding: 10px 8px;
+    background-color: red;
+    border-radius: 10%;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+.scrollTop a{
+    text-decoration: none;
+    font-weight: bold;
+    color:#fff;
+    font-size: 20px;
+
+}
+.carousel-control-prev,
+.carousel-control-next{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    top:calc(75% - 25%)
+
+
+}
+.carousel-inner {
+    width: 100vw!important;
+    height: 100vh!important;
     background-size: cover;
     background-attachment: fixed;
-   
-
-
-}
-button{
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: 2px solid orangered;
-    color: white;
-    margin-top: 6%;
-    margin-right: 20px;
-    font-weight: bold;
-    font-size: 15px;
-    transition: 0.2s;
-    border: none;
-   
-}
-.sign_in{
-    background-color: orangered;
-}
-.read_more:hover{
-    background-color: orangered;
-    cursor: pointer;
-
-}
-.top_container{
-    color: black;
- position: relative;
- 
- padding-top: 100px;
- top: 10%;
- color: black;
- 
-}
-.top_container h1{
-    font-size: 50px;
-}
-.top_container h1 h3{
-    font-size: 25px;
+    background-position: center;
     
 }
-.top_container p{
-    font-size: 15px;
-
+.btn {
+    margin-top: 20px;
 }
-.slider{
-    background-color: orangered;
-    border-radius: 50%;
-    padding: 10px 15px;
-    position: relative;
-    top:20px;
-    left: 90%;
-   font-size: 20px;
-   color: #fff;
-   cursor: pointer;
-}
-.page{
-    width: 100px;
-    padding-top: 200px;
-    list-style: none;
-    display: flex;
-    justify-content:space-between;
-    margin-top: 100px;
-    cursor: pointer;
-
-
-}
-.page:nth-child(1){
-    color:orangered
+.company{
+    font-size: xx-small;
 }
